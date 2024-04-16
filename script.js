@@ -273,12 +273,46 @@ class AsyncAndAwait {
   }
 }
 
-// const fetchAPI = new FetchAPI();
+class RunClassesSynchronously {
+  constructor() {
+    this.actualMethod()
+  }
 
-// const chainingPromises = new ChainingPromises();
+  async actualMethod() {
+    
+    await this.fetchAPIMethod()
+    await this.chainingPromisesMethod()
+    await this.catchingErrorsMethod()
+    await this.combiningMultiplePromisesMethod()
+    await this.asyncAndAwaitMethod()
+    
+  }
+  
+  async fetchAPIMethod() {
+    let fetchAPI = new FetchAPI();
 
-// const catchingErrors = new CatchingErrors();
+  }
 
-// const combiningMultiplePromises = new CombiningMultiplePromises();
+  async chainingPromisesMethod() {
+    let chainingPromises = new ChainingPromises();
 
-const asyncAndAwait = new AsyncAndAwait();
+  }
+
+  async catchingErrorsMethod() {
+    let catchingErrors = new CatchingErrors();
+
+  }
+
+  async combiningMultiplePromisesMethod() {
+    let combiningMultiplePromises = new CombiningMultiplePromises();
+
+  }
+
+  async asyncAndAwaitMethod() {
+    let asyncAndAwait = new AsyncAndAwait();
+
+  }
+
+}
+
+const runClassesSynchronously = new RunClassesSynchronously()
